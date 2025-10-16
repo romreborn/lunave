@@ -32,6 +32,23 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         whileHover={{ rotate: 0 }}
       >
+        {/* Gradients */}
+        <defs>
+          <radialGradient id="petalGradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style={{ stopColor: '#FDA4BA', stopOpacity: 1 }} />
+            <stop offset="50%" style={{ stopColor: '#F8C9D4', stopOpacity: 0.95 }} />
+            <stop offset="100%" style={{ stopColor: '#F8C9D4', stopOpacity: 0.8 }} />
+          </radialGradient>
+          <radialGradient id="centerGradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style={{ stopColor: '#E890A8', stopOpacity: 1 }} />
+            <stop offset="70%" style={{ stopColor: '#FDA4BA', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: '#F8C9D4', stopOpacity: 1 }} />
+          </radialGradient>
+          <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="0" dy="1" stdDeviation="1" floodOpacity="0.2"/>
+          </filter>
+        </defs>
+
         {/* Flower petals */}
         <g transform="translate(50,50)">
           {/* Center petal */}
@@ -118,40 +135,28 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           <motion.circle
             r="8"
             fill="url(#centerGradient)"
+            filter="url(#shadow)"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 1, duration: 0.4 }}
           />
 
-          {/* Inner detail */}
+          {/* Inner detail - darker for contrast */}
           <motion.circle
-            r="4"
-            fill="white"
-            opacity="0.6"
+            r="3"
+            fill="#E890A8"
+            opacity="0.7"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 1.2, duration: 0.3 }}
           />
         </g>
-
-        {/* Gradients */}
-        <defs>
-          <radialGradient id="petalGradient" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" style={{ stopColor: '#F8C9D4', stopOpacity: 1 }} />
-            <stop offset="70%" style={{ stopColor: '#F8C9D4', stopOpacity: 0.8 }} />
-            <stop offset="100%" style={{ stopColor: '#FDA4BA', stopOpacity: 0.6 }} />
-          </radialGradient>
-          <radialGradient id="centerGradient" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" style={{ stopColor: '#FDA4BA', stopOpacity: 1 }} />
-            <stop offset="100%" style={{ stopColor: '#F8C9D4', stopOpacity: 1 }} />
-          </radialGradient>
-        </defs>
       </motion.svg>
 
       {/* Brand Name */}
-      <div className="flex flex-col">
+      <div className="flex flex-col leading-none">
         <h1
-          className={`${textSizes[size]} font-display font-bold leading-tight`}
+          className={`${textSizes[size]} font-display font-bold -mb-1`}
           style={{ color: textColor }}
         >
           <span className="bg-gradient-to-r from-baby-pink to-baby-pink/80 bg-clip-text text-transparent">
@@ -159,8 +164,8 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           </span>
         </h1>
         <span
-          className={`${size === 'small' ? 'text-xs' : 'text-sm'} font-light tracking-wider`}
-          style={{ color: textColor, opacity: 0.8 }}
+          className={`${size === 'small' ? 'text-xs' : 'text-sm'} font-normal tracking-tight`}
+          style={{ color: textColor, opacity: 0.9 }}
         >
           Nails
         </span>
