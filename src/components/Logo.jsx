@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) => {
   const sizeClasses = {
-    small: 'w-8 h-8',
-    medium: 'w-10 h-10',
-    large: 'w-12 h-12',
-    xlarge: 'w-16 h-16'
+    small: 'w-10 h-10',
+    medium: 'w-14 h-14',
+    large: 'w-16 h-16',
+    xlarge: 'w-20 h-20'
   };
 
   const textSizes = {
@@ -17,7 +17,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
 
   return (
     <motion.div
-      className={`flex items-center gap-3 ${className}`}
+      className={`flex items-center gap-4 ${className}`}
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
     >
@@ -53,7 +53,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
         <g transform="translate(50,50)">
           {/* Center petal */}
           <motion.path
-            d="M 0,-25 Q -8,-20 -10,-10 Q -8,-5 0,0 Q 8,-5 10,-10 Q 8,-20 0,-25"
+            d="M 0,-30 Q -10,-24 -12,-12 Q -10,-6 0,0 Q 10,-6 12,-12 Q 10,-24 0,-30"
             fill="url(#petalGradient)"
             opacity="0.9"
             initial={{ scale: 0 }}
@@ -62,7 +62,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           />
           {/* Top petal */}
           <motion.path
-            d="M 0,-25 Q -8,-20 -10,-10 Q -8,-5 0,0 Q 8,-5 10,-10 Q 8,-20 0,-25"
+            d="M 0,-30 Q -10,-24 -12,-12 Q -10,-6 0,0 Q 10,-6 12,-12 Q 10,-24 0,-30"
             fill="url(#petalGradient)"
             opacity="0.85"
             transform="rotate(45)"
@@ -72,7 +72,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           />
           {/* Right petal */}
           <motion.path
-            d="M 0,-25 Q -8,-20 -10,-10 Q -8,-5 0,0 Q 8,-5 10,-10 Q 8,-20 0,-25"
+            d="M 0,-30 Q -10,-24 -12,-12 Q -10,-6 0,0 Q 10,-6 12,-12 Q 10,-24 0,-30"
             fill="url(#petalGradient)"
             opacity="0.85"
             transform="rotate(90)"
@@ -82,7 +82,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           />
           {/* Bottom right petal */}
           <motion.path
-            d="M 0,-25 Q -8,-20 -10,-10 Q -8,-5 0,0 Q 8,-5 10,-10 Q 8,-20 0,-25"
+            d="M 0,-30 Q -10,-24 -12,-12 Q -10,-6 0,0 Q 10,-6 12,-12 Q 10,-24 0,-30"
             fill="url(#petalGradient)"
             opacity="0.85"
             transform="rotate(135)"
@@ -92,7 +92,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           />
           {/* Bottom petal */}
           <motion.path
-            d="M 0,-25 Q -8,-20 -10,-10 Q -8,-5 0,0 Q 8,-5 10,-10 Q 8,-20 0,-25"
+            d="M 0,-30 Q -10,-24 -12,-12 Q -10,-6 0,0 Q 10,-6 12,-12 Q 10,-24 0,-30"
             fill="url(#petalGradient)"
             opacity="0.85"
             transform="rotate(180)"
@@ -102,7 +102,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           />
           {/* Bottom left petal */}
           <motion.path
-            d="M 0,-25 Q -8,-20 -10,-10 Q -8,-5 0,0 Q 8,-5 10,-10 Q 8,-20 0,-25"
+            d="M 0,-30 Q -10,-24 -12,-12 Q -10,-6 0,0 Q 10,-6 12,-12 Q 10,-24 0,-30"
             fill="url(#petalGradient)"
             opacity="0.85"
             transform="rotate(225)"
@@ -112,7 +112,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           />
           {/* Left petal */}
           <motion.path
-            d="M 0,-25 Q -8,-20 -10,-10 Q -8,-5 0,0 Q 8,-5 10,-10 Q 8,-20 0,-25"
+            d="M 0,-30 Q -10,-24 -12,-12 Q -10,-6 0,0 Q 10,-6 12,-12 Q 10,-24 0,-30"
             fill="url(#petalGradient)"
             opacity="0.85"
             transform="rotate(270)"
@@ -122,7 +122,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           />
           {/* Top left petal */}
           <motion.path
-            d="M 0,-25 Q -8,-20 -10,-10 Q -8,-5 0,0 Q 8,-5 10,-10 Q 8,-20 0,-25"
+            d="M 0,-30 Q -10,-24 -12,-12 Q -10,-6 0,0 Q 10,-6 12,-12 Q 10,-24 0,-30"
             fill="url(#petalGradient)"
             opacity="0.85"
             transform="rotate(315)"
@@ -133,7 +133,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
 
           {/* Center circle */}
           <motion.circle
-            r="8"
+            r="10"
             fill="url(#centerGradient)"
             filter="url(#shadow)"
             initial={{ scale: 0 }}
@@ -143,7 +143,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
 
           {/* Inner detail - darker for contrast */}
           <motion.circle
-            r="3"
+            r="4"
             fill="#E890A8"
             opacity="0.7"
             initial={{ scale: 0 }}
