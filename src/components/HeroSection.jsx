@@ -43,7 +43,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-block mb-6"
+              className="inline-block component-margin-sm"
             >
               <span className="bg-baby-pink/90 backdrop-blur-sm text-white px-8 py-3 rounded-full text-sm font-semibold shadow-lg">
                 ✨ Premium Nail Art Studio
@@ -52,7 +52,7 @@ const HeroSection = () => {
 
             {/* Main Heading */}
             <motion.h1
-              className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              className="font-display text-4xl md:text-6xl lg:text-7xl font-bold component-margin-sm leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -64,7 +64,7 @@ const HeroSection = () => {
 
             {/* Subheading */}
             <motion.p
-              className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-white/90 leading-relaxed"
+              className="text-lg md:text-xl lg:text-2xl component-margin-md max-w-3xl mx-auto text-white/90 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -75,7 +75,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center component-margin-lg"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}

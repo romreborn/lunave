@@ -121,9 +121,9 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center component-margin-lg"
         >
-          <span className="inline-block bg-gradient-to-r from-baby-pink to-baby-pink/80 text-white px-6 py-3 rounded-full text-sm font-semibold mb-4 shadow-lg">
+          <span className="inline-block bg-gradient-to-r from-baby-pink to-baby-pink/80 text-white px-6 py-3 rounded-full text-sm font-semibold component-margin-sm shadow-lg">
             Our Services
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal-gray mb-6">
@@ -137,7 +137,7 @@ const ServicesSection = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 component-margin-lg">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}

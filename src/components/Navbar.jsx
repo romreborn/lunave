@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,18 +40,13 @@ const Navbar = () => {
       }`}
     >
       <div className="container-custom">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <motion.div
-            className="flex items-center"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h1 className={`font-display text-2xl font-bold ${
-              isScrolled ? 'text-charcoal-gray' : 'text-white'
-            }`}>
-              Lunave Nails
-            </h1>
-          </motion.div>
+          <Logo
+            size="medium"
+            textColor={isScrolled ? '#333333' : '#FFFFFF'}
+            className="transition-colors duration-300"
+          />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
