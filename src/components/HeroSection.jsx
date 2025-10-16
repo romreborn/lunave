@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 
 const HeroSection = () => {
   const scrollToSection = (sectionId) => {
@@ -15,13 +14,6 @@ const HeroSection = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Lunave Nails - Premium Nail Art Studio in Jakarta</title>
-        <meta
-          name="description"
-          content="Experience luxury nail art at Lunave Nails. Premium gel extensions, custom designs, and professional nail care services in Jakarta."
-        />
-      </Helmet>
 
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-charcoal-gray via-baby-pink/20 to-cream-nude">
         {/* Background Image */}

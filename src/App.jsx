@@ -1,4 +1,4 @@
-import { HelmetProvider } from 'react-helmet-async';
+import { useEffect } from 'react';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import PortfolioSection from './components/PortfolioSection';
@@ -9,21 +9,23 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
 function App() {
+  useEffect(() => {
+    document.title = 'Lunave Nails - Premium Nail Art Studio in Jakarta';
+  }, []);
+
   return (
-    <HelmetProvider>
-      <div className="app-container">
-        <Navbar />
-        <main>
-          <HeroSection />
-          <ServicesSection />
-          <PortfolioSection />
-          <Testimonials />
-          <CTASection />
-          <InstagramFeed />
-        </main>
-        <Footer />
-      </div>
-    </HelmetProvider>
+    <div className="app-container">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <PortfolioSection />
+        <Testimonials />
+        <CTASection />
+        <InstagramFeed />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
