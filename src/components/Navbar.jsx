@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Logo from './Logo';
+import StaticLogo from './StaticLogo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +42,7 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Logo
+          <StaticLogo
             size="medium"
             textColor={isScrolled ? '#333333' : '#FFFFFF'}
             className="transition-colors duration-300"
