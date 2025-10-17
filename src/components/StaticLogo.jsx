@@ -15,22 +15,22 @@ const StaticLogo = ({ size = 'medium', className = '', textColor = 'currentColor
   };
 
   const textSizes = {
-    small: 'text-lg',
-    medium: 'text-xl',
-    large: 'text-2xl',
-    xlarge: 'text-3xl'
+    small: 'text-base',
+    medium: 'text-lg',
+    large: 'text-xl',
+    xlarge: 'text-2xl'
   };
 
   return (
     <motion.div
-      className={`flex items-center gap-3 ${className}`}
+      className={`flex items-center gap-2 ${className}`}
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
     >
       {/* Logo Image */}
       <motion.img
         src={getImageSrc()}
-        alt="Lunave Nails Logo"
+        alt="Lunavè Nails Logo"
         className={`${sizeClasses[size]} transition-all duration-300`}
         style={{ filter: textColor === '#FFFFFF' ? 'brightness(0) invert(1)' : 'none' }}
         initial={{ opacity: 0, scale: 0.8 }}
@@ -39,21 +39,15 @@ const StaticLogo = ({ size = 'medium', className = '', textColor = 'currentColor
       />
 
       {/* Brand Name */}
-      <div className="flex flex-col leading-none">
+      <div className="flex items-center leading-none">
         <h1
-          className={`${textSizes[size]} font-display font-bold -mb-1`}
+          className={`${textSizes[size]} font-display font-bold`}
           style={{ color: textColor }}
         >
           <span className="bg-gradient-to-r from-baby-pink to-baby-pink/80 bg-clip-text text-transparent">
-            Lunave
+            Lunavè
           </span>
         </h1>
-        <span
-          className={`${size === 'small' ? 'text-xs' : 'text-sm'} font-normal tracking-tight`}
-          style={{ color: textColor, opacity: 0.9 }}
-        >
-          Nails
-        </span>
       </div>
     </motion.div>
   );

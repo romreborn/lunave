@@ -10,7 +10,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   useEffect(() => {
-    document.title = 'Lunave Nails - Premium Nail Art Studio in Jakarta';
+    document.title = 'Lunavè Nails - Premium Nail Art Studio in Jakarta';
   }, []);
 
   return (

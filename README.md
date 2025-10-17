@@ -1,6 +1,6 @@
-# Lunave Nails Website
+# Lunavè Nails Website
 
-A modern, responsive landing page for Lunave Nails - a premium nail art studio in Jakarta. Built with Vite, React.js, and TailwindCSS.
+A modern, responsive landing page for Lunavè Nails - a premium nail art studio in Jakarta. Built with Vite, React.js, and TailwindCSS.
 
 ## 🌟 Features
 
@@ -196,4 +196,4 @@ For support, please contact us at info@lunavenails.com or via WhatsApp at +62 81
 
 ---
 
-Made with ❤️ for Lunave Nails
+Made with ❤️ for Lunavè Nails

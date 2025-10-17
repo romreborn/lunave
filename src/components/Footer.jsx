@@ -14,7 +14,7 @@ const Footer = () => {
 
   const scrollToWhatsApp = () => {
     const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '6281234567890';
-    const message = encodeURIComponent('Halo Lunave Nails, saya tertarik untuk booking.');
+    const message = encodeURIComponent('Halo Lunavè Nails, saya tertarik untuk booking.');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
@@ -69,7 +69,7 @@ const Footer = () => {
             className="space-y-4 mb-8"
           >
             <h3 className="font-display text-2xl font-bold text-baby-pink">
-              Lunave Nails
+              Lunavè Nails
             </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               Your premier destination for professional nail art and beauty services in Jakarta.
@@ -182,7 +182,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-gray-400 text-sm"
             >
-              © 2024 Lunave Nails. All rights reserved.
+              © 2024 Lunavè Nails. All rights reserved.
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}

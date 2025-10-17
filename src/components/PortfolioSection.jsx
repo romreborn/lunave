@@ -250,7 +250,7 @@ const PortfolioSection = () => {
           <motion.button
             onClick={() => {
               const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '6281234567890';
-              const message = encodeURIComponent('Halo Lunave Nails, saya ingin membuat janji dengan desain khusus.');
+              const message = encodeURIComponent('Halo Lunavè Nails, saya ingin membuat janji dengan desain khusus.');
               window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
             }}
             className="btn-primary"

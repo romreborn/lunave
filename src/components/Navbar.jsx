@@ -205,7 +205,7 @@ const Navbar = () => {
                 <motion.button
                   onClick={() => {
                     const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '6281234567890';
-                    const message = encodeURIComponent('Halo Lunave Nails, saya ingin booking.');
+                    const message = encodeURIComponent('Halo Lunavè Nails, saya ingin booking.');
                     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
                     setIsMobileMenuOpen(false);
                   }}

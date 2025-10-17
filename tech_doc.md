@@ -1,5 +1,5 @@
-Technical Documentation: LUNAVE NAILS
-Project: Website Landing Page Lunave Nails
+Technical Documentation: LUNAVÈ NAILS
+Project: Website Landing Page Lunavè Nails
 
 Version: 1.0
 
@@ -7,7 +7,7 @@ Date: 15 Oktober 2025
 
 1. Introduction
 1.1. Project Overview
-Dokumen ini merinci spesifikasi teknis untuk pengembangan website landing page Lunave Nails. Proyek ini bertujuan untuk menciptakan sebuah single-page application (SPA) yang modern, responsif, dan elegan untuk menampilkan layanan, portofolio, dan memfasilitasi booking online.
+Dokumen ini merinci spesifikasi teknis untuk pengembangan website landing page Lunavè Nails. Proyek ini bertujuan untuk menciptakan sebuah single-page application (SPA) yang modern, responsif, dan elegan untuk menampilkan layanan, portofolio, dan memfasilitasi booking online.
 
 1.2. Core Technology Stack
 Framework: Vite + React.js
@@ -137,7 +137,7 @@ Fitur modal preview saat gambar diklik diimplementasikan menggunakan library sep
 
 4.4. Booking CTA
 Tombol "Book via WhatsApp" mengarah ke URL yang diformat secara dinamis:
-https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=Halo%20Lunave%20Nails,%20saya%20tertarik%20untuk%20booking.
+https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=Halo%20Lunavè%20Nails,%20saya%20tertarik%20untuk%20booking.
 
 Form booking (jika ada) akan menggunakan EmailJS untuk mengirim data langsung ke email admin tanpa memerlukan backend.
 

@@ -22,7 +22,7 @@ const ServiceCard = ({ service, index }) => {
 
   const scrollToWhatsApp = () => {
     const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '6281234567890';
-    const message = encodeURIComponent(`Halo Lunave Nails, saya tertarik dengan layanan ${service.title}.`);
+    const message = encodeURIComponent(`Halo Lunavè Nails, saya tertarik dengan layanan ${service.title}.`);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
@@ -159,7 +159,7 @@ const ServicesSection = () => {
           <motion.button
             onClick={() => {
               const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '6281234567890';
-              const message = encodeURIComponent('Halo Lunave Nails, saya ingin bertanya tentang layanan khusus.');
+              const message = encodeURIComponent('Halo Lunavè Nails, saya ingin bertanya tentang layanan khusus.');
               window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
             }}
             className="btn-primary"

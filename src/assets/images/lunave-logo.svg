@@ -5,17 +5,17 @@
   <!-- Gradients -->
   <defs>
     <radialGradient id="petalGradient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style={{ stopColor: '#FDA4BA', stopOpacity: 1 }} />
-      <stop offset="50%" style={{ stopColor: '#F8C9D4', stopOpacity: 0.95 }} />
-      <stop offset="100%" style={{ stopColor: '#F8C9D4', stopOpacity: 0.8 }} />
+      <stop offset="0%" stop-color="#FDA4BA" stop-opacity="1" />
+      <stop offset="50%" stop-color="#F8C9D4" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#F8C9D4" stop-opacity="0.8" />
     </radialGradient>
     <radialGradient id="centerGradient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style={{ stopColor: '#E890A8', stopOpacity: 1 }} />
-      <stop offset="70%" style={{ stopColor: '#FDA4BA', stopOpacity: 1 }} />
-      <stop offset="100%" style={{ stopColor: '#F8C9D4', stopOpacity: 1 }} />
+      <stop offset="0%" stop-color="#E890A8" stop-opacity="1" />
+      <stop offset="70%" stop-color="#FDA4BA" stop-opacity="1" />
+      <stop offset="100%" stop-color="#F8C9D4" stop-opacity="1" />
     </radialGradient>
     <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" floodOpacity="0.2"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.2"/>
     </filter>
   </defs>
 
@@ -94,15 +94,15 @@
 
   <!-- Brand Name -->
   <text x="100" y="170" text-anchor="middle" font-family="Playfair Display, serif" font-size="28" font-weight="bold" fill="#333333">
-    <tspan fill="url(#textGradient)">Lunave</tspan>
+    <tspan fill="url(#textGradient)">Lunavè</tspan>
     <tspan x="100" dy="20" font-size="16" font-weight="normal" fill="#666666">Nails</tspan>
   </text>
 
   <!-- Text gradient -->
   <defs>
     <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style={{ stopColor: '#F8C9D4', stopOpacity: 1 }} />
-      <stop offset="100%" style={{ stopColor: '#FDA4BA', stopOpacity: 1 }} />
+      <stop offset="0%" stop-color="#F8C9D4" stop-opacity="1" />
+      <stop offset="100%" stop-color="#FDA4BA" stop-opacity="1" />
     </linearGradient>
   </defs>
 </svg>

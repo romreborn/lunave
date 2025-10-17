@@ -87,7 +87,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Don't just take our word for it. Hear from our satisfied clients who have experienced
-            the Lunave Nails difference and transformed their nails into stunning works of art.
+            the Lunavè Nails difference and transformed their nails into stunning works of art.
           </p>
         </motion.div>
 
@@ -147,7 +147,7 @@ const Testimonials = () => {
           <motion.button
             onClick={() => {
               const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '6281234567890';
-              const message = encodeURIComponent('Halo Lunave Nails, saya ingin membuat janji temu.');
+              const message = encodeURIComponent('Halo Lunavè Nails, saya ingin membuat janji temu.');
               window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
             }}
             className="btn-primary"

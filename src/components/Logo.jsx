@@ -160,7 +160,7 @@ const Logo = ({ size = 'medium', className = '', textColor = 'currentColor' }) =
           style={{ color: textColor }}
         >
           <span className="bg-gradient-to-r from-baby-pink to-baby-pink/80 bg-clip-text text-transparent">
-            Lunave
+            Lunavè
           </span>
         </h1>
         <span
