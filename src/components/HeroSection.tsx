@@ -22,13 +22,17 @@ export function HeroSection({
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1731644139982-b75487df663e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYWlsJTIwYXJ0JTIwc2Fsb24lMjBsdXh1cnl8ZW58MXx8fHwxNzYyMzM0MjcxfDA&ixlib=rb-4.1.0&q=80&w=1080)",
-        }}
-      />
+      {/* Background Video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/lunave_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="absolute inset-0 bg-gradient-to-br from-pink-500/70 via-pink-400/60 to-rose-400/65" />
 
       {/* Animated Background Blobs */}
