@@ -8,7 +8,10 @@ interface HeroSectionProps {
   onViewServicesClick: () => void;
 }
 
-export function HeroSection({ onBookClick, onViewServicesClick }: HeroSectionProps) {
+export function HeroSection({
+  onBookClick,
+  onViewServicesClick,
+}: HeroSectionProps) {
   const features = [
     { icon: <Sparkles className="w-4 h-4" />, text: "Premium Quality" },
     { icon: <Palette className="w-4 h-4" />, text: "Custom Designs" },
@@ -19,14 +22,15 @@ export function HeroSection({ onBookClick, onViewServicesClick }: HeroSectionPro
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1731644139982-b75487df663e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYWlsJTIwYXJ0JTIwc2Fsb24lMjBsdXh1cnl8ZW58MXx8fHwxNzYyMzM0MjcxfDA&ixlib=rb-4.1.0&q=80&w=1080)',
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1731644139982-b75487df663e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYWlsJTIwYXJ0JTIwc2Fsb24lMjBsdXh1cnl8ZW58MXx8fHwxNzYyMzM0MjcxfDA&ixlib=rb-4.1.0&q=80&w=1080)",
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-pink-500/70 via-pink-400/60 to-rose-400/65" />
-      
+
       {/* Animated Background Blobs */}
       <motion.div
         className="absolute top-20 left-10 w-72 h-72 bg-pink-400/20 rounded-full blur-3xl"
@@ -75,7 +79,10 @@ export function HeroSection({ onBookClick, onViewServicesClick }: HeroSectionPro
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Badge variant="outline" className="mb-6 px-6 py-2 bg-white/90 backdrop-blur-sm border-white/50 text-white">
+          <Badge
+            variant="outline"
+            className="mb-6 px-6 py-2 bg-white/90 backdrop-blur-sm border-white/50 text-pink"
+          >
             Welcome to Lunavè Nails Studio
           </Badge>
         </motion.div>
@@ -95,9 +102,10 @@ export function HeroSection({ onBookClick, onViewServicesClick }: HeroSectionPro
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Experience premium nail care and artistic designs at Jakarta's most elegant nail studio. 
-          We create wearable art that expresses your unique style and personality, using premium 
-          products and expert techniques in a luxurious, hygienic environment.
+          Experience premium nail care and artistic designs at Jakarta's most
+          elegant nail studio. We create wearable art that expresses your unique
+          style and personality, using premium products and expert techniques in
+          a luxurious, hygienic environment.
         </motion.p>
 
         <motion.div
@@ -117,7 +125,7 @@ export function HeroSection({ onBookClick, onViewServicesClick }: HeroSectionPro
             size="lg"
             variant="outline"
             onClick={onViewServicesClick}
-            className="border-white text-white hover:bg-white/20 backdrop-blur-sm"
+            className="border-white text-pink hover:bg-white/20 backdrop-blur-sm"
           >
             View Services
           </Button>
@@ -136,7 +144,10 @@ export function HeroSection({ onBookClick, onViewServicesClick }: HeroSectionPro
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
             >
-              <Badge variant="secondary" className="px-4 py-2 bg-white/90 backdrop-blur-sm text-gray-800">
+              <Badge
+                variant="secondary"
+                className="px-4 py-2 bg-white/90 backdrop-blur-sm text-gray-800"
+              >
                 <span className="mr-2">{feature.icon}</span>
                 {feature.text}
               </Badge>
@@ -150,7 +161,7 @@ export function HeroSection({ onBookClick, onViewServicesClick }: HeroSectionPro
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <span className="text-sm">Discover More</span>
+          {/* <span className="text-sm">Discover More</span> */}
           <motion.div
             animate={{
               y: [0, 10, 0],

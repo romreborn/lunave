@@ -13,19 +13,20 @@ export function ContactSection({ onWhatsAppClick }: ContactSectionProps) {
     {
       icon: <MapPin className="w-5 h-5" />,
       label: "Location",
-      value: "Jakarta Selatan, Indonesia",
+      value: "Citra Raya Tangerang, Indonesia",
       subValue: "Premium Shopping District",
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: "Phone",
-      value: "+62 812-3456-7890",
+      value: "+62 851 1104 3518",
       subValue: "Call us anytime",
     },
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "hello@lunavenails.com",
+      // value: "hello@lunavenails.com",
+      value: "setiawanalex99@gmail.com",
       subValue: "We'll reply within 24hrs",
     },
     {
@@ -37,7 +38,10 @@ export function ContactSection({ onWhatsAppClick }: ContactSectionProps) {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
@@ -46,17 +50,20 @@ export function ContactSection({ onWhatsAppClick }: ContactSectionProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Badge variant="outline" className="mb-4 px-4 py-2 border-pink-200 bg-white">
+          <Badge
+            variant="outline"
+            className="mb-4 px-4 py-2 border-pink-200 bg-white"
+          >
             Get in Touch
           </Badge>
           <h2 className="mb-4 bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
             Book Your Appointment
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600 mb-8">
-            Ready to transform your nails into works of art? Contact us today to schedule your appointment 
-            or inquire about our services.
+            Ready to transform your nails into works of art? Contact us today to
+            schedule your appointment or inquire about our services.
           </p>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -114,7 +121,7 @@ export function ContactSection({ onWhatsAppClick }: ContactSectionProps) {
             © 2025 Lunavè Nails Studio. All rights reserved.
           </p>
           <p className="text-sm text-gray-500">
-            Where Beauty Meets Art • Jakarta, Indonesia
+            Where Beauty Meets Art • Tangerang, Indonesia
           </p>
         </motion.div>
       </div>

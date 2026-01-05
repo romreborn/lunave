@@ -8,12 +8,16 @@ import { Toaster } from "./components/ui/sonner";
 import { toast } from "sonner@2.0.3";
 
 export default function App() {
-  const whatsappNumber = "+6281234567890"; // Configure your WhatsApp number here
+  const whatsappNumber = "+6285111043518"; // Configure your WhatsApp number here
 
   const handleWhatsAppBooking = (message?: string) => {
-    const defaultMessage = "Hi Lunavè Nails Studio! I would like to book an appointment.";
+    const defaultMessage =
+      "Hi Lunavè Nails Studio! I would like to book an appointment.";
     const encodedMessage = encodeURIComponent(message || defaultMessage);
-    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(
+      /[^0-9]/g,
+      ""
+    )}?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
     toast.success("Opening WhatsApp...", {
       description: "You'll be redirected to WhatsApp to complete your booking.",
@@ -35,20 +39,20 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <Toaster position="top-center" />
-      
+
       <Header onBookClick={() => handleWhatsAppBooking()} />
-      
+
       <HeroSection
         onBookClick={() => handleWhatsAppBooking()}
         onViewServicesClick={handleViewServices}
       />
-      
+
       <ServicesSection onBookService={handleBookService} />
-      
+
       <GallerySection />
-      
+
       <TestimonialsSection onBookClick={() => handleWhatsAppBooking()} />
-      
+
       <ContactSection onWhatsAppClick={() => handleWhatsAppBooking()} />
     </div>
   );

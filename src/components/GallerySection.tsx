@@ -21,25 +21,25 @@ export function GallerySection() {
     },
     {
       id: "2",
-      url: "https://images.unsplash.com/photo-1634235421232-7dee1989eb0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnZWwlMjBuYWlsJTIwZXh0ZW5zaW9uc3xlbnwxfHx8fDE3NjIzMzA0Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      url: "https://img.freepik.com/free-photo/healthy-beautiful-manicure-manicurist_23-2148766558.jpg?t=st=1767623271~exp=1767626871~hmac=199427cf90065328f887ac40422d0e69e730772fc5809df3ff54cb5fe19706ed",
       category: ["all", "gel-x"],
       alt: "Gel-X nail extensions",
     },
     {
       id: "3",
-      url: "https://images.unsplash.com/photo-1758225490983-0fae7961e425?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYWlsJTIwc2Fsb24lMjBwZWRpY3VyZXxlbnwxfHx8fDE3NjIzMzA0Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      url: "https://img.freepik.com/free-photo/spa-treatment-product-female-feet-hand-spa-orchid-flowers-ceramic-bowl_1150-37718.jpg?t=st=1767623454~exp=1767627054~hmac=44a565047358b02fb3acb512573566aea65728b6550d4e7fffbe59c260db71f0",
       category: ["all", "pedicure"],
       alt: "Spa pedicure treatment",
     },
     {
       id: "4",
-      url: "https://images.unsplash.com/photo-1664794497184-3876c2958f6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpc3RpYyUyMG5haWwlMjBkZXNpZ258ZW58MXx8fHwxNzYyMzMwNDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      url: "https://images.stockcake.com/public/5/6/1/5611d8d7-3893-4d93-86b7-7f85b980ad36/artistic-nail-design-stockcake.jpg",
       category: ["all", "nail-art"],
       alt: "Artistic nail design",
     },
     {
       id: "5",
-      url: "https://images.unsplash.com/photo-1599671230528-278b4e163ce5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYW5pY3VyZSUyMHBvbGlzaCUyMGNvbG9yfGVufDF8fHx8MTc2MjMzMDQ4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      url: "https://images.stockcake.com/public/0/4/9/049a6893-3a87-47df-94b9-d715d0e73c12_large/dramatic-manicure-artistry-stockcake.jpg",
       category: ["all", "classic"],
       alt: "Classic manicure polish",
     },
@@ -53,10 +53,15 @@ export function GallerySection() {
 
   const [activeTab, setActiveTab] = useState("all");
 
-  const filteredImages = images.filter((img) => img.category.includes(activeTab));
+  const filteredImages = images.filter((img) =>
+    img.category.includes(activeTab)
+  );
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-br from-pink-50 to-rose-50">
+    <section
+      id="gallery"
+      className="py-20 bg-gradient-to-br from-pink-50 to-rose-50"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -65,18 +70,26 @@ export function GallerySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Badge variant="outline" className="mb-4 px-4 py-2 border-pink-200 bg-white">
+          <Badge
+            variant="outline"
+            className="mb-4 px-4 py-2 border-pink-200 bg-white"
+          >
             Our Work
           </Badge>
           <h2 className="mb-4 bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
             Portfolio Gallery
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Explore our stunning collection of nail designs, from elegant classics to bold artistic creations.
+            Explore our stunning collection of nail designs, from elegant
+            classics to bold artistic creations.
           </p>
         </motion.div>
 
-        <Tabs defaultValue="all" className="w-full" onValueChange={setActiveTab}>
+        <Tabs
+          defaultValue="all"
+          className="w-full"
+          onValueChange={setActiveTab}
+        >
           <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-5 mb-12 bg-white/80 backdrop-blur-sm">
             <TabsTrigger value="all">All Designs</TabsTrigger>
             <TabsTrigger value="gel-x">Gel-X</TabsTrigger>
