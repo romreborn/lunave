@@ -32,7 +32,7 @@ export function TestimonialsSection({ onBookClick }: TestimonialsSectionProps) {
       id: "2",
       name: "Amanda Chen",
       rating: 5,
-      text: "Best nail salon in Jakarta! The staff is professional, the place is super clean, and my nails always look perfect for weeks.",
+      text: "Best nail salon in Tangerang! The staff is professional, the place is super clean, and my nails always look perfect for weeks.",
       service: "Gel Polish",
       initials: "AC",
     },
@@ -71,10 +71,26 @@ export function TestimonialsSection({ onBookClick }: TestimonialsSectionProps) {
   ];
 
   const stats = [
-    { icon: <Users className="w-6 h-6" />, value: "5000+", label: "Happy Clients" },
-    { icon: <Award className="w-6 h-6" />, value: "98%", label: "Satisfaction Rate" },
-    { icon: <Clock className="w-6 h-6" />, value: "3+", label: "Years Experience" },
-    { icon: <Star className="w-6 h-6" />, value: "4.9", label: "Average Rating" },
+    {
+      icon: <Users className="w-6 h-6" />,
+      value: "5000+",
+      label: "Happy Clients",
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      value: "98%",
+      label: "Satisfaction Rate",
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      value: "3+",
+      label: "Years Experience",
+    },
+    {
+      icon: <Star className="w-6 h-6" />,
+      value: "4.9",
+      label: "Average Rating",
+    },
   ];
 
   return (
@@ -94,7 +110,8 @@ export function TestimonialsSection({ onBookClick }: TestimonialsSectionProps) {
             What Our Clients Say
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Don't just take our word for it - hear from our satisfied clients about their experiences at Lunavè Nails Studio.
+            Don't just take our word for it - hear from our satisfied clients
+            about their experiences at Lunavè Nails Studio.
           </p>
         </motion.div>
 
@@ -111,20 +128,27 @@ export function TestimonialsSection({ onBookClick }: TestimonialsSectionProps) {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4 mb-4">
                     <Avatar className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500">
-                      <AvatarFallback className="text-white">{testimonial.initials}</AvatarFallback>
+                      <AvatarFallback className="text-white">
+                        {testimonial.initials}
+                      </AvatarFallback>
                     </Avatar>
                     <div>
                       <p className="text-gray-900">{testimonial.name}</p>
-                      <p className="text-sm text-gray-500">{testimonial.service}</p>
+                      <p className="text-sm text-gray-500">
+                        {testimonial.service}
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex gap-1 mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-pink-500 text-pink-500" />
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-pink-500 text-pink-500"
+                      />
                     ))}
                   </div>
-                  
+
                   <p className="text-gray-600 italic">"{testimonial.text}"</p>
                 </CardContent>
               </Card>
@@ -149,7 +173,9 @@ export function TestimonialsSection({ onBookClick }: TestimonialsSectionProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="flex justify-center mb-3 text-pink-600">{stat.icon}</div>
+              <div className="flex justify-center mb-3 text-pink-600">
+                {stat.icon}
+              </div>
               <div className="mb-1 text-pink-600">{stat.value}</div>
               <p className="text-sm text-gray-600">{stat.label}</p>
             </motion.div>
