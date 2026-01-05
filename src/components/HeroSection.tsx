@@ -106,7 +106,7 @@ export function HeroSection({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Experience premium nail care and artistic designs at Jakarta's most
+          Experience premium nail care and artistic designs at Tangerang's most
           elegant nail studio. We create wearable art that expresses your unique
           style and personality, using premium products and expert techniques in
           a luxurious, hygienic environment.
