@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
@@ -12,6 +13,19 @@ export function HeroSection({
   onBookClick,
   onViewServicesClick,
 }: HeroSectionProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleVideoLoad = () => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.8;
+    }
+  };
+
+  const handleVideoPlaying = () => {
+    setIsLoaded(true);
+  };
+
   const features = [
     { icon: <Sparkles className="w-4 h-4" />, text: "Premium Quality" },
     { icon: <Palette className="w-4 h-4" />, text: "Custom Designs" },
@@ -24,11 +38,15 @@ export function HeroSection({
       {/* Background Image with Overlay */}
       {/* Background Video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        ref={videoRef}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[4000ms] ${isLoaded ? "opacity-100" : "opacity-0"
+          }`}
         autoPlay
         loop
         muted
         playsInline
+        onLoadedMetadata={handleVideoLoad}
+        onPlaying={handleVideoPlaying}
       >
         <source src="/lunave_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
